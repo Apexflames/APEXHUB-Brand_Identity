@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>APEXHUB Brand Identity</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F7F7F9;--surf:#fff;--ink:#0A0A0F;--mut:#5F6070;--bd:#E2E2E9;--ac:#5A4BFF;--inv:#0A0A0F;--invt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0A0F;--surf:#14141C;--ink:#F5F5F8;--mut:#9A9BAE;--bd:#2A2A36;--ac:#8378FF;--inv:#F5F5F8;--invt:#0A0A0F}}
@@ -12,190 +12,246 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
 main{max-width:1000px;margin:0 auto;padding:32px 20px 80px}
 h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;margin:0}
-h2{font-size:28px;margin:72px 0 8px;font-weight:600}
-h3{font-size:17px;font-weight:600;margin:0 0 6px}
-p{margin:0 0 12px;max-width:68ch}.m{color:var(--mut)}
-code,.mono{font-family:'JetBrains Mono',monospace;font-size:13px}
+h2{font-size:28px;margin:72px 0 8px;font-weight:600}h3{font-size:17px;font-weight:600;margin:0 0 6px}
+p{margin:0 0 12px;max-width:70ch}.m{color:var(--mut)}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
 .nav{display:flex;justify-content:space-between;align-items:center}
 button{font:inherit;background:none;color:var(--ink);border:1px solid var(--bd);border-radius:8px;padding:6px 12px;cursor:pointer}
-button:focus-visible,a:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .card{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:20px}
-.tile{display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--bd);padding:28px;min-height:140px}
-.w{background:#fff;color:#0A0A0F}.k{background:#0A0A0F;color:#fff}.g{background:#8A8A94;color:#0A0A0F}.a{background:#5A4BFF;color:#fff}
-.lock{display:inline-flex;align-items:center;gap:14px;font-family:Sora;font-weight:700;letter-spacing:.07em}
-.lock b{font-weight:300}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:56px}
+.tile{display:flex;align-items:center;justify-content:center;gap:18px;border-radius:12px;border:1px solid var(--bd);padding:28px;min-height:130px}
+.w{background:#fff;color:#0A0A0F}.k{background:#0A0A0F;color:#fff}.g{background:#D9D9E0;color:#0A0A0F}.a{background:#5A4BFF;color:#fff}
+.wm{font-family:Sora;font-weight:700;letter-spacing:.08em;white-space:nowrap}
+.wm svg{width:.72em;height:.72em;margin:0 .02em}
+.lock{display:inline-flex;align-items:center;gap:.5em}
+.wmk{display:block;height:.73em;width:calc(.73em*7.25)}
+h1{font-size:clamp(38px,6.5vw,64px);font-weight:700;letter-spacing:-.02em}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-top:56px}
 @media(max-width:720px){.hero{grid-template-columns:1fr}}
-h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.02em}
 .tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--bd);white-space:nowrap}
-.sw{height:64px;border-radius:8px;border:1px solid var(--bd);margin-bottom:6px}
-.foot{display:inline-flex;align-items:center;gap:8px;font:500 13px Inter;color:var(--mut)}
-.foot b{color:var(--ink);font-family:Sora;letter-spacing:.06em;font-weight:600}
+.sw{height:56px;border-radius:8px;border:1px solid var(--bd);margin-bottom:6px}
+.foot{display:inline-flex;align-items:center;gap:8px;font:500 13px Inter;opacity:.7}
+.foot b{font-family:Sora;letter-spacing:.06em;font-weight:600}
+pre{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:16px;overflow-x:auto;margin:0}
 .bad{border-left:3px solid #D63A3A;padding-left:12px;margin-bottom:8px}
-.load svg{width:56px;height:56px}
-.ld .l,.ld .r{animation:rise 1.4s cubic-bezier(.65,0,.35,1) infinite}.ld .r{animation-delay:.12s}
-.ld .c{stroke-dasharray:60;animation:draw 1.4s cubic-bezier(.65,0,.35,1) infinite}
-.ld .n{animation:pop 1.4s ease-out infinite}
-@keyframes rise{0%{transform:scaleY(0)}40%,100%{transform:scaleY(1)}}
-@keyframes draw{0%,20%{stroke-dashoffset:60}60%,100%{stroke-dashoffset:0}}
-@keyframes pop{0%,55%{opacity:0;transform:translateY(8px)}75%,100%{opacity:1;transform:none}}
-.ld *{transform-box:fill-box;transform-origin:bottom}
+.ld .p1,.ld .p2{transform-box:fill-box;transform-origin:bottom;animation:up 1.6s cubic-bezier(.65,0,.35,1) infinite}
+.ld .p2{animation-delay:.14s}
+.ld .c{stroke-dasharray:100;animation:draw 1.6s cubic-bezier(.65,0,.35,1) infinite}
+.ld .n{animation:float 1.6s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes up{0%{transform:scaleY(0)}35%,100%{transform:scaleY(1)}}
+@keyframes draw{0%,28%{stroke-dashoffset:100}58%,100%{stroke-dashoffset:0}}
+@keyframes float{0%,48%{opacity:0;transform:translateY(16px)}78%,100%{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.ld *{animation:none!important}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="mk" viewBox="0 0 100 100"><path d="M12 14h16v72H12zM72 14h16v72H72z" fill="currentColor"/><path d="M22 71.6 50 36 78 71.6" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="50" cy="15" r="6.5" fill="var(--node,var(--ac))"/></symbol>
-<symbol id="mm" viewBox="0 0 100 100"><path d="M8 8h22v84H8zM70 8h22v84H70z" fill="currentColor"/><path d="M18 74 50 34 82 74" fill="none" stroke="currentColor" stroke-width="20"/></symbol>
+<symbol id="wm" viewBox="0 0 5292 730"><g transform="translate(0 730) scale(1 -1)" fill="currentColor"><path transform="translate(-13 0)" d="M13 0 254.25 730H519.25L768.5 0H599.25L397 616.5L448.75 595.5H320.25L373.5 616.5L177 0ZM195.5 181.25 245.75 317.25H532.25L582.5 181.25Z"/><path transform="translate(811 0)" d="M226 209V350.5H356.75Q395.25 350.5 422.5 365.75Q449.75 381 464.625 408.5Q479.5 436 479.5 472.25Q479.5 509.5 464.625 537.0Q449.75 564.5 422.5 579.25Q395.25 594 356.75 594H226V735.5H348.5Q441.5 735.5 508.0 704.75Q574.5 674 610.0 616.75Q645.5 559.5 645.5 480.25V464.25Q645.5 386 610.0 328.625Q574.5 271.25 508.0 240.125Q441.5 209 348.5 209ZM82 0V735.5H246V0Z"/><path transform="translate(1538 0)" d="M82 0V730H241.5V0ZM221.5 0V136H541V0ZM221.5 303V439H517.5V303ZM221.5 594V730H534V594Z"/><path transform="translate(2178 0)" d="M8.5 0 258 388.5 259.5 372 29.5 730H210.25L351.75 501.75H375.25L514.5 730H689.5L458.5 369.5L456 386L712.5 0H531.75L365.5 257.5H342L183.5 0Z"/><path transform="translate(2950 0)" d="M553.5 0V730H717.5V0ZM82 0V730H246V0ZM217 295V438.5H582.5V295Z"/><path transform="translate(3810 0)" d="M388.25 -19.5Q284.75 -19.5 213.5 19.375Q142.25 58.25 105.125 129.25Q68 200.25 68 296.75V730H232V290.75Q232 243.25 250.25 207.625Q268.5 172 303.25 152.75Q338 133.5 388.25 133.5Q438.5 133.5 473.125 152.625Q507.75 171.75 525.625 207.0Q543.5 242.25 543.5 290.75V730H707.5V296.75Q707.5 200.25 670.875 129.25Q634.25 58.25 563.125 19.375Q492 -19.5 388.25 -19.5Z"/><path transform="translate(4646 0)" d="M221.5 -5.5V122.5H393.25Q438.75 122.5 461.875 146.625Q485 170.75 485 214.75Q485 259 462.0 282.5Q439 306 393.25 306H221.5V404.5H385.25Q460.5 404.5 519.625 386.375Q578.75 368.25 612.625 326.875Q646.5 285.5 646.5 216V202Q646.5 136.5 616.75 90.125Q587 43.75 528.75 19.125Q470.5 -5.5 385.25 -5.5ZM82 -5.5V735.5H241.5V-5.5ZM221.5 331.5V430H366.25Q412.5 430 433.75 453.75Q455 477.5 455 518.25Q455 560 433.75 583.75Q412.5 607.5 366.25 607.5H221.5V735.5H356Q482 735.5 549.25 682.75Q616.5 630 616.5 532V517.25Q616.5 448.75 582.375 407.75Q548.25 366.75 489.5 349.125Q430.75 331.5 356 331.5Z"/></g></symbol>
+<symbol id="rk" viewBox="0 0 100 100"><path d="M12 14h16v72H12zM72 14h16v72H72z" fill="currentColor"/><path d="M22 71.6 50 36 78 71.6" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="50" cy="15" r="6.5" fill="var(--bar,currentColor)"/></symbol>
+<symbol id="rm" viewBox="0 0 100 100"><path d="M6 8h22v84H6zM72 8h22v84H72z" fill="currentColor"/><path d="M16 80 50 50 84 80" fill="none" stroke="currentColor" stroke-width="16"/><circle cx="50" cy="16" r="11" fill="var(--bar,currentColor)"/></symbol>
 </svg>
-<main>
-<div class="nav"><span class="lock" style="font-size:18px"><svg width="30" height="30"><use href="#mk"/></svg>APEX<b>HUB</b></span><button id="t" aria-label="Toggle theme">Light / dark</button></div>
+
+<div class="nav"><span class="wm lock" style="font-size:18px"><svg style="width:28px;height:28px"><use href="#rk"/></svg><svg class="wmk" role="img" aria-label="APEXHUB"><use href="#wm"/></svg></span><button id="t" aria-label="Toggle theme">Light / dark</button></div>
 
 <section class="hero">
-<div><h1>The peak is the point where everything connects.</h1>
-<p class="m" style="margin-top:20px">APEXHUB brand identity: a proposal for a developer brand that grows into a technology company. Strategy, mark, system and rules, in one page.</p></div>
-<div class="card" style="display:flex;justify-content:center;padding:40px"><svg viewBox="0 0 100 100" width="100%" style="max-width:320px;color:var(--ink)"><use href="#mk"/></svg></div>
+<div><h1>Where the peak and the hub meet.</h1>
+<p class="m" style="margin-top:20px">APEXHUB second-stage identity review. The original <b>Ascent Node</b> mark is kept, and refined where the review found weaknesses.</p></div>
+<div class="card" style="display:flex;justify-content:center;padding:40px"><svg viewBox="0 0 100 100" width="100%" style="max-width:300px;--bar:var(--ac)"><use href="#rk"/></svg></div>
 </section>
 
-<h2>Strategy</h2>
+<h2>Review of Ascent Node</h2>
+<p>You chose to keep Ascent Node, so it stays. The review still found real weaknesses, and the refinements below target them instead of hiding them.</p>
 <div class="grid">
-<div class="card"><h3>Essence</h3><p class="m">Ideas, engineered to a high standard.</p></div>
-<div class="card"><h3>Positioning</h3><p class="m">The mark you find on well-built digital products: precise, considered, made by someone who cares how it works.</p></div>
-<div class="card"><h3>Personality</h3><p class="m">Precise, confident, curious, human. Technical without being cold, premium without ornament.</p></div>
-<div class="card"><h3>Promise</h3><p class="m">Whatever carries this mark was built with intention, and will still hold up in ten years.</p></div>
+<div class="card"><h3>Weakness: genericness</h3><p class="m">A node, a chevron, and an A inside an H are all items the brief lists as generic. Fix: make the placement the signature. The node sits level with the pillar tops, with a fixed gap above the chevron apex.</p></div>
+<div class="card"><h3>Weakness: 16px</h3><p class="m">The 6.5-unit node falls to about 1px and disappears. Fix: a dedicated micro mark with a larger node that merges into the apex.</p></div>
+<div class="card"><h3>Weakness: A is forced</h3><p class="m">The A is only suggested by the chevron. Fix: stop claiming it. The H is primary, the rise is secondary, the A is a discovery.</p></div>
 </div>
 
-<h2>Concepts explored</h2>
-<p class="m">Five directions were scored 1 to 10 before one was chosen. Mountain and network ideas were kept only where they could be transformed into something ownable.</p>
-<div class="tbl card"><table>
-<tr><th>Concept</th><th>Idea</th><th>Memory</th><th>Distinct</th><th>Small size</th><th>Fit</th><th>Total</th></tr>
-<tr><td>Summit Network</td><td>Peak drawn from nodes</td><td>6</td><td>4</td><td>5</td><td>6</td><td>21</td></tr>
-<tr><td>Converge</td><td>Lines meeting at a point</td><td>5</td><td>5</td><td>6</td><td>6</td><td>22</td></tr>
-<tr><td>Stacked Pillars</td><td>Modular H blocks rising</td><td>7</td><td>6</td><td>8</td><td>6</td><td>27</td></tr>
-<tr><td>Open Cut</td><td>A in the negative space of a hex</td><td>6</td><td>5</td><td>7</td><td>5</td><td>23</td></tr>
-<tr><td><b>Ascent Node</b></td><td>A inside H, apex node above</td><td>9</td><td>8</td><td>9</td><td>9</td><td><b>35</b></td></tr>
+<h2>Six routes</h2>
+<p class="m">Scores are design judgment on a 1 to 10 scale, not measurements. Total is the sum of the five columns.</p>
+<div class="card tbl"><table>
+<tr><th>Route</th><th>Idea</th><th>Distinct</th><th>Simple</th><th>16px</th><th>Mono</th><th>Wordmark</th><th>Total</th></tr>
+<tr><td>A Ascent Node (v1)</td><td>A in H, apex node</td><td>4</td><td>6</td><td>5</td><td>7</td><td>6</td><td>28</td></tr>
+<tr><td>B Convergence</td><td>Strokes meeting at a point</td><td>4</td><td>7</td><td>7</td><td>8</td><td>5</td><td>31</td></tr>
+<tr><td>C Cut Block</td><td>H cut out of a peak-shaped block</td><td>7</td><td>7</td><td>6</td><td>9</td><td>6</td><td>35</td></tr>
+<tr><td>D Radial Hub</td><td>Hub node rays to an apex</td><td>3</td><td>5</td><td>4</td><td>6</td><td>5</td><td>23</td></tr>
+<tr><td>E One Path</td><td>Single stroke forms A/H</td><td>6</td><td>5</td><td>4</td><td>7</td><td>6</td><td>28</td></tr>
+<tr><td><b>F Rise</b></td><td>H with rising bar, stepped tops</td><td>7</td><td>9</td><td>8</td><td>9</td><td>9</td><td><b>42</b></td></tr>
 </table></div>
-<p class="m" style="margin-top:12px">Ascent Node won because it can be explained in one sentence and holds up as a silhouette with no color at all.</p>
+<p class="m" style="margin-top:12px"><b>Decision:</b> you selected Ascent Node (route A). My scores rank it lower than Rise (28 against 42), mainly on distinctiveness and small-size performance, so those are the two areas the refinements address. Rise stays on file as a backup if the refined mark still feels too common after a reverse image search.</p>
 
 <h2>The mark: Ascent Node</h2>
 <div class="grid" style="align-items:start">
-<div class="card"><p><b>One sentence:</b> an A rises between the two pillars of an H, and a single node marks the apex.</p>
-<p class="m"><b>HUB</b> is the H: two structural pillars with a connection between them. <b>APEX</b> is the peak that rises from that connection, topped by a node that sits level with the pillar tops. The chevron is both the crossbar of the H and the strokes of the A, so neither letter is added; each is revealed by the other.</p>
-<p class="m"><b>Technology:</b> pillars and a node read as structure and a point on a network, with no circuit or bracket clichés.</p></div>
-<div class="card"><svg viewBox="0 0 100 100" width="100%" style="max-width:300px;color:var(--ink);display:block;margin:auto">
+<div class="card">
+<p><b>Primary meaning:</b> an H of two pillars, with a node marking a single high point.</p>
+<p><b>Secondary:</b> the chevron is both the crossbar of the H and a peak rising between the pillars (APEX), and the pillars are the structure that connects (HUB). The chevron implies an A without drawing one.</p>
+<p><b>Tertiary:</b> a node and pillars give a structural, network feel without circuit imagery.</p>
+<p class="m">One sentence: an H whose center rises to a single point.</p></div>
+<div class="card"><svg viewBox="0 0 100 100" width="100%" style="max-width:300px;display:block;margin:auto;color:var(--ink)">
 <g stroke="var(--ac)" stroke-width=".4" fill="none" opacity=".8"><path d="M0 14H100M0 86H100M12 0V100M28 0V100M72 0V100M88 0V100M50 0V100"/><circle cx="50" cy="15" r="6.5"/><path d="M22 71.6 50 36 78 71.6" stroke-dasharray="1.5 1.5"/></g>
-<use href="#mk" opacity=".9"/></svg>
-<p class="m mono" style="margin-top:12px">Grid 100 units. Pillar width 16 (x). Chevron stroke 14. Node radius 6.5. Clear space = 1x on all sides, with x = pillar width.</p></div>
+<use href="#rk" opacity=".9"/></svg>
+<p class="m mono" style="margin-top:12px">100-unit grid. X = pillar width = 16. Chevron stroke 14, node radius 6.5. Node center level with the pillar tops (y 15 against 14), 3.6-unit gap above the chevron apex. Pillars 72 tall, chevron apex at 36.</p></div>
 </div>
+<p class="m">Optical notes: the chevron overlaps the pillars so the joins stay solid; the node is placed 1 unit lower than the pillar tops so it reads as aligned rather than floating above them. These are judgments from construction, to be checked in a vector editor at small sizes.</p>
 
 <h2>Logo system</h2>
 <div class="grid">
-<div class="tile w" style="grid-column:1/-1"><span class="lock" style="font-size:38px;--node:#5A4BFF"><svg width="64" height="64"><use href="#mk"/></svg>APEX<b>HUB</b></span></div>
-<div class="tile k"><span class="lock" style="font-size:20px;--node:#8378FF"><svg width="30" height="30"><use href="#mk"/></svg>APEX<b>HUB</b></span></div>
-<div class="tile w"><svg width="72" height="72" style="--node:#5A4BFF"><use href="#mk"/></svg></div>
-<div class="tile k"><svg width="48" height="48"><use href="#mm"/></svg><svg width="32" height="32" style="margin-left:18px"><use href="#mm"/></svg><svg width="16" height="16" style="margin-left:18px"><use href="#mm"/></svg></div>
+<div class="tile w" style="grid-column:1/-1"><span class="wm lock" style="font-size:40px;--bar:#5A4BFF"><svg style="width:60px;height:60px"><use href="#rk"/></svg><svg class="wmk" role="img" aria-label="APEXHUB"><use href="#wm"/></svg></span></div>
+<div class="tile k"><span class="wm lock" style="font-size:22px;--bar:#8378FF"><svg style="width:32px;height:32px"><use href="#rk"/></svg><svg class="wmk" role="img" aria-label="APEXHUB"><use href="#wm"/></svg></span></div>
+<div class="tile w" style="flex-direction:column"><svg style="width:56px;height:56px;--bar:#5A4BFF"><use href="#rk"/></svg><span class="wm" style="font-size:20px"><svg class="wmk" role="img" aria-label="APEXHUB"><use href="#wm"/></svg></span></div>
+<div class="tile w"><svg style="width:72px;height:72px;--bar:#5A4BFF"><use href="#rk"/></svg></div>
+<div class="tile k"><svg width="48" height="48"><use href="#rm"/></svg><svg width="32" height="32"><use href="#rm"/></svg><svg width="24" height="24"><use href="#rm"/></svg><svg width="16" height="16"><use href="#rm"/></svg></div>
 </div>
 <div class="grid" style="margin-top:16px">
-<div class="card"><h3>Primary and secondary</h3><p class="m">Primary: stacked or horizontal mark plus wordmark. Secondary: the compact horizontal lockup for headers and tight layouts.</p></div>
-<div class="card"><h3>Monogram and icon</h3><p class="m">The mark itself is the A+H monogram. It needs no separate construction, which keeps one symbol across every surface.</p></div>
-<div class="card"><h3>Micro mark</h3><p class="m">Node removed, pillars widened to 22 and chevron to 20. Used at 24px and below, and for the favicon.</p></div>
-<div class="card"><h3>Wordmark</h3><p class="m">Sora Bold for APEX, Sora Light for HUB, tracking +70. The weight shift mirrors the mark: the peak is heavy, the hub is open. Custom step: cut the X crossing to a flat joint when outlining.</p></div>
+<div class="card"><h3>Horizontal, stacked, symbol</h3><p class="m">Horizontal for navigation and wide layouts, stacked for square spaces and splash screens, symbol alone wherever the name is already visible.</p></div>
+<div class="card"><h3>Monogram</h3><p class="m">The mark itself is the A+H monogram, so no separate construction is needed. One symbol across every surface.</p></div>
+<div class="card"><h3>Micro mark</h3><p class="m">For 24px and below. Pillars widen from 16 to 22 units, the chevron flattens (apex at 50, ends at 80) and thins to 16, and the node grows to radius 11 and sits clearly apart above the apex. Rendered and compared at 16, 20, 24 and 32px in light and dark: the first version, with the node touching the apex, read as a W with a dot; this version reads closest to an H with a dot. Still a judgment from renders, not a test with users.</p></div>
+<div class="card"><h3>Wordmark</h3><p class="m">Outlined Sora Bold with optical pair spacing. Full details in the Wordmark section below.</p></div>
 </div>
 
-<h2>Monochrome and background tests</h2>
+<h2>Wordmark</h2>
+<p>The wordmark is Sora Bold converted to vector outlines, so spacing is fixed and cannot shift between browsers or fallback fonts. Every lockup on this page uses the outlined version.</p>
 <div class="grid">
-<div class="tile w"><svg width="56" height="56" style="--node:#0A0A0F"><use href="#mk"/></svg></div>
-<div class="tile k"><svg width="56" height="56" style="--node:#fff"><use href="#mk"/></svg></div>
-<div class="tile g"><svg width="56" height="56" style="--node:#0A0A0F"><use href="#mk"/></svg></div>
-<div class="tile a"><svg width="56" height="56" style="--node:#fff"><use href="#mk"/></svg></div>
+<div class="tile w" style="grid-column:1/-1"><svg class="wmk" role="img" aria-label="APEXHUB" style="font-size:64px"><use href="#wm"/></svg></div>
+<div class="tile k"><svg class="wmk" role="img" aria-label="APEXHUB" style="font-size:36px"><use href="#wm"/></svg></div>
+<div class="tile g"><svg class="wmk" role="img" aria-label="APEXHUB" style="font-size:36px"><use href="#wm"/></svg></div>
+<div class="tile w" style="--bar:#5A4BFF"><span class="lock" style="font-size:26px"><svg style="width:40px;height:40px"><use href="#rk"/></svg><svg class="wmk" role="img" aria-label="APEXHUB"><use href="#wm"/></svg></span></div>
+<div class="tile k" style="--bar:#8378FF;flex-direction:column;gap:14px"><svg style="width:48px;height:48px"><use href="#rk"/></svg><svg class="wmk" role="img" aria-label="APEXHUB" style="font-size:20px"><use href="#wm"/></svg></div>
 </div>
-<p class="m" style="margin-top:12px">In one color the node and pillars share a fill, and the silhouette still reads as an H with a peak. The accent is never required.</p>
+<div class="grid" style="margin-top:16px">
+<div class="card"><h3>Kerning</h3><p class="m">Base tracking is +60 on a 1000-unit em, which opens uppercase letters just enough for screens. Three pairs are then tightened optically: A-P (-18), E-X (-14), X-H (-10). The diagonals of A and X leave open space against straight stems, so those pairs sit closer. Stem pairs (P-E, H-U, U-B) keep the base value. These values are my optical judgment and should be reviewed in a vector editor at display and small sizes.</p></div>
+<div class="card"><h3>Mark and wordmark</h3><p class="m">In the horizontal lockup the wordmark cap height is about half the mark height, centered on the mark, with a gap of 2X (X = pillar width of the mark). The stacked lockup centers both and uses a gap of 2X as well. Minimum wordmark cap height: 8px.</p></div>
+<div class="card"><h3>Weight and customization</h3><p class="m">One weight, because APEX and HUB read as one name and a weight split gave no structural reason. The only customization so far is the spacing above. A custom X joint or terminal cut is possible later but is not designed yet. Lowercase is not used.</p></div>
+</div>
 
-<h2>Color</h2>
+<h2>Monochrome and backgrounds</h2>
 <div class="grid">
-<div><div class="sw" style="background:#0A0A0F"></div><b>Apex Black</b><br><code>#0A0A0F</code></div>
-<div><div class="sw" style="background:#FFFFFF"></div><b>Hub White</b><br><code>#FFFFFF</code></div>
-<div><div class="sw" style="background:#14141C"></div><b>Charcoal</b><br><code>#14141C</code></div>
-<div><div class="sw" style="background:#F7F7F9"></div><b>Light neutral</b><br><code>#F7F7F9</code></div>
-<div><div class="sw" style="background:#5F6070"></div><b>Mid neutral</b><br><code>#5F6070</code></div>
-<div><div class="sw" style="background:#E2E2E9"></div><b>Border</b><br><code>#E2E2E9</code></div>
-<div><div class="sw" style="background:#5A4BFF"></div><b>Signal Violet</b><br><code>#5A4BFF</code></div>
-<div><div class="sw" style="background:#8378FF"></div><b>Signal (dark)</b><br><code>#8378FF</code></div>
+<div class="tile w"><svg width="56" height="56"><use href="#rk"/></svg></div>
+<div class="tile k"><svg width="56" height="56"><use href="#rk"/></svg></div>
+<div class="tile g"><svg width="56" height="56"><use href="#rk"/></svg></div>
+<div class="tile a"><svg width="56" height="56"><use href="#rk"/></svg></div>
 </div>
-<p class="m" style="margin-top:12px"><b>Why violet:</b> blue is the default of software. A blue-violet is still clearly digital, reads as ambition rather than finance or utility, and gives the single node a distinct identity. Ratio: 85% neutral, 12% surfaces and structure, 3% accent. Gradients (Signal to a 20% lighter tint) are an optional expression for marketing only, never the logo. Contrast: #5A4BFF on white is about 6:1 and #8378FF on #0A0A0F about 6.5:1, both passing AA for text. Never put the full-color mark on mid-tone backgrounds below 3:1; switch to monochrome.</p>
+<p class="m" style="margin-top:12px">Without the accent, the node and pillars share one fill and the silhouette still reads as an H with a peak. The accent version colors only the node. On mid-tone backgrounds use whichever of white or black has more contrast (never the accent), and test light grey like #D9D9E0 with black. On photography use a one-color mark; on busy images place it on a solid containment tile.</p>
 
-<h2>Typography</h2>
+<h2>Color and contrast</h2>
 <div class="grid">
-<div class="card"><h3 style="font-family:Sora;font-size:28px">Sora</h3><p class="m">Brand and headings, weights 300, 600, 700. Geometric, wide, strong at display size. Weakness: loose in small text. Free (OFL). Alternative: Manrope.</p></div>
-<div class="card"><h3 style="font-size:28px">Inter</h3><p class="m">Interface and body, weights 400, 500, 600. Excellent screen rendering and hinting. Neutral, so it lets Sora carry personality. Free (OFL). Alternative: Geist.</p></div>
-<div class="card"><h3 class="mono" style="font-size:24px">JetBrains Mono</h3><p class="m">Code, metadata, version labels, weight 400. Distinct letterforms for developer contexts. Free (OFL). Alternative: IBM Plex Mono.</p></div>
+<div><div class="sw" style="background:#0A0A0F"></div><b>Black</b> <code>#0A0A0F</code></div>
+<div><div class="sw" style="background:#14141C"></div><b>Charcoal</b> <code>#14141C</code></div>
+<div><div class="sw" style="background:#FFFFFF"></div><b>White</b> <code>#FFFFFF</code></div>
+<div><div class="sw" style="background:#F7F7F9"></div><b>Light</b> <code>#F7F7F9</code></div>
+<div><div class="sw" style="background:#5F6070"></div><b>Mid / muted</b> <code>#5F6070</code></div>
+<div><div class="sw" style="background:#E2E2E9"></div><b>Border</b> <code>#E2E2E9</code></div>
+<div><div class="sw" style="background:#5A4BFF"></div><b>Signal</b> <code>#5A4BFF</code></div>
+<div><div class="sw" style="background:#8378FF"></div><b>Signal, dark</b> <code>#8378FF</code></div>
 </div>
+<p class="m" style="margin-top:12px">Blue-violet was kept: it separates from the blue default of most software and holds up in both themes. Ratios below are calculated with the WCAG relative-luminance formula.</p>
+<div class="card tbl"><table>
+<tr><th>Pair</th><th>Ratio</th><th>Use</th></tr>
+<tr><td>Black on white</td><td>19.75</td><td>All text</td></tr>
+<tr><td>White on black</td><td>19.75</td><td>All text</td></tr>
+<tr><td>Signal #5A4BFF on white</td><td>5.41</td><td>Text and links (AA); not AAA</td></tr>
+<tr><td>Signal #5A4BFF on light #F7F7F9</td><td>5.05</td><td>Text and links (AA)</td></tr>
+<tr><td>Signal dark #8378FF on black</td><td>5.73</td><td>Text and links (AA)</td></tr>
+<tr><td>Signal dark #8378FF on charcoal</td><td>5.32</td><td>Text and links (AA)</td></tr>
+<tr><td>White on Signal #5A4BFF</td><td>5.41</td><td>Button text (AA)</td></tr>
+<tr><td>Muted #5F6070 on white / light</td><td>6.19 / 5.78</td><td>Secondary text</td></tr>
+<tr><td>Muted dark #9A9BAE on black / charcoal</td><td>7.22 / 6.69</td><td>Secondary text</td></tr>
+<tr><td>Signal #5A4BFF on black</td><td>3.65</td><td><b>Not for text.</b> Graphics only (3:1)</td></tr>
+</table></div>
+<p class="m" style="margin-top:12px">The correction from v1: I had stated about 6 and 6.5. The calculated values are 5.41 and 5.73. Accent usage: node of the mark, focus ring, links, active state. Never large fills. Gradient (marketing only): #5A4BFF to #8A7DFF at 135 degrees, never behind or inside the logo.</p>
 
 <h2>Built by APEXHUB</h2>
-<p class="m">The signature is a credit, not an ad: low contrast, small, and always in the footer or credits area.</p>
 <div class="grid">
-<div class="tile w"><span class="foot" style="color:#5F6070"><svg width="16" height="16" style="color:#0A0A0F"><use href="#mm"/></svg>Built by <b style="color:#0A0A0F">APEXHUB</b></span></div>
-<div class="tile k"><span class="foot" style="color:#9A9BAE"><svg width="16" height="16" style="color:#fff"><use href="#mm"/></svg>Built by <b style="color:#fff">APEXHUB</b></span></div>
+<div class="tile w"><span class="foot" style="color:#0A0A0F"><svg width="16" height="16"><use href="#rm"/></svg><span>Built by <b>APEXHUB</b></span></span></div>
+<div class="tile k"><span class="foot" style="color:#fff"><svg width="16" height="16"><use href="#rm"/></svg><span>Built by <b>APEXHUB</b></span></span></div>
 </div>
-<div class="card" style="margin-top:16px"><div class="tbl"><table>
-<tr><th>Phrase</th><th>Use it for</th></tr>
-<tr><td><b>Built by APEXHUB</b></td><td>Default. Client sites, apps, README footers, case studies.</td></tr>
-<tr><td>Designed &amp; Built by APEXHUB</td><td>Full design and development engagements, portfolio pieces.</td></tr>
-<tr><td>Powered by APEXHUB</td><td>Products running on APEXHUB infrastructure or APIs.</td></tr>
-<tr><td>An APEXHUB project</td><td>Open-source and experimental work.</td></tr>
-<tr><td>Crafted by / Built with</td><td>Avoid. Weaker and easy to confuse with tools.</td></tr>
-</table></div></div>
-<p class="m" style="margin-top:12px">Footer: micro mark 16px, text 13px Inter 500, word APEXHUB in Sora 600 with +60 tracking, 8px gap, 60 to 70% opacity at rest, full on hover. Place bottom-left or centered, 24px from the legal row. Loading screens and login pages: mark only, 24px, bottom center. Screenshots and decks: bottom-right, 14px from edges.</p>
+<div class="card tbl" style="margin-top:16px"><table>
+<tr><th>Phrase</th><th>Rank</th><th>Use</th></tr>
+<tr><td>Built by APEXHUB</td><td>Primary</td><td>Everything: client sites, apps, READMEs, case studies</td></tr>
+<tr><td>Designed &amp; Built by APEXHUB</td><td>Secondary</td><td>Portfolio and full-service projects</td></tr>
+<tr><td>Powered by APEXHUB</td><td>Secondary</td><td>Only where APEXHUB is the underlying system</td></tr>
+<tr><td>An APEXHUB Project</td><td>Occasional</td><td>Experiments and internal tools</td></tr>
+<tr><td>Crafted by APEXHUB</td><td>Rare</td><td>Premium editorial pieces only; it dilutes the primary</td></tr>
+</table></div>
+<p class="m" style="margin-top:12px"><b>Rules:</b> micro mark 16px before the text, text 13px Inter Medium, name in Sora SemiBold +60 tracking, 8px gap, 70% opacity at rest. Minimum 11px text and 12px mark. Footer only, left or center, 24px below the legal line. Client projects: never larger than the client's own footer text, always monochrome, and the client may recolor to match their palette but not resize, reflow or remove the mark from the lockup. Omit it on regulated or white-label products, or when the contract says so. APEXHUB-owned products may use the accent node. Dark mode uses the white version at the same opacity.</p>
+<p class="m">Cumulative-recognition strategy: same lockup, same position, same size, every project. Consistency is the whole mechanism.</p>
 
-<h2>Small-scale and platform use</h2>
+<h2>Favicon, app icon, social, watermark</h2>
 <div class="grid">
-<div class="card"><h3>Favicon</h3><p class="m">Micro mark, no wordmark. 16px: pillars and chevron only. 32 and 48px: same shape, SVG favicon with a prefers-color-scheme rule to flip ink between #0A0A0F and #fff.</p></div>
-<div class="card"><h3>App icon</h3><p class="m">Square on Apex Black, mark at 56% of the icon width, node in Signal Violet, OS applies corner radius (about 22%). Light variant: white tile, black mark.</p></div>
-<div class="card"><h3>Social</h3><p class="m">Mark centered on Apex Black at 52% of the frame, so circular crops keep the pillar edges.</p></div>
-<div class="card"><h3>Watermark</h3><p class="m">Monochrome mark with wordmark at 35 to 45% opacity, white on dark imagery and black on light, bottom-right.</p></div>
+<div class="tile k"><svg width="16" height="16"><use href="#rm"/></svg><svg width="32" height="32"><use href="#rm"/></svg><svg width="48" height="48"><use href="#rm"/></svg></div>
+<div class="tile w"><svg width="16" height="16"><use href="#rm"/></svg><svg width="32" height="32"><use href="#rm"/></svg><svg width="48" height="48"><use href="#rm"/></svg></div>
+<div class="tile k"><svg width="96" height="96" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#0A0A0F" stroke="#2A2A36"/><g transform="translate(20 20) scale(.6)" style="color:#fff;--bar:#8378FF"><use href="#rk" width="100" height="100"/></g></svg><svg width="64" height="64" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" fill="#F0F0F5"/><g transform="translate(24 24) scale(.52)" style="color:#0A0A0F"><use href="#rm" width="100" height="100"/></g></svg></div>
 </div>
 <div class="grid" style="margin-top:16px">
-<div class="tile k" style="--node:#8378FF"><svg width="96" height="96" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#0A0A0F" stroke="#2A2A36"/><g transform="translate(22 22) scale(.56)" style="color:#fff"><use href="#mk" width="100" height="100"/></g></svg></div>
-<div class="tile w"><svg width="64" height="64" viewBox="0 0 100 100" style="color:#0A0A0F"><circle cx="50" cy="50" r="49" fill="#F0F0F5"/><g transform="translate(24 24) scale(.52)"><use href="#mk" width="100" height="100"/></g></svg></div>
+<div class="card"><h3>Favicon</h3><p class="m">Micro mark only, SVG with a prefers-color-scheme rule flipping the fill between #0A0A0F and #FFFFFF. 16px uses the micro geometry unchanged; 32 and 48px use the same file. Accent node only at 32px and above.</p></div>
+<div class="card"><h3>App icon</h3><p class="m">Black tile, mark at 60% width, node in accent. Light variant: white tile, black mark. The OS applies the corner radius; the preview uses 22%.</p></div>
+<div class="card"><h3>Social</h3><p class="m">Mark at about 52% of the frame on black; the circle crop keeps both pillars because nothing sits near the corners.</p></div>
+<div class="card"><h3>Watermark</h3><p class="m">Mark with wordmark, bottom-right, 14px from the edges, 8% of image width. White at 45% opacity on dark imagery, black at 40% on light.</p></div>
 </div>
 
 <h2>Motion and loading</h2>
 <div class="grid">
-<div class="card"><h3>Logo reveal (700 ms)</h3><p class="m">Pillars rise from the baseline (0 to 280 ms), the chevron draws from left to right (200 to 500 ms), the node settles down onto the apex (450 to 700 ms). Easing: cubic-bezier(.65,0,.35,1). Direction is always upward and inward: the elevation and convergence ideas.</p></div>
-<div class="card load" style="display:flex;align-items:center;gap:20px"><svg class="ld" viewBox="0 0 100 100" style="color:var(--ink)"><rect class="l" x="12" y="14" width="16" height="72" fill="currentColor"/><rect class="r" x="72" y="14" width="16" height="72" fill="currentColor"/><path class="c" d="M22 71.6 50 36 78 71.6" fill="none" stroke="currentColor" stroke-width="14" pathLength="60"/><circle class="n" cx="50" cy="15" r="6.5" fill="var(--ac)"/></svg><p class="m" style="margin:0">Loading loop: 1.4 s, CSS only. Replace with Framer Motion or Lottie using the same three steps. Respects reduced motion.</p></div>
+<div class="card"><h3>One principle: ascent</h3><p class="m">Pillars rise from the baseline, the chevron is drawn stroke by stroke from left to right, then the node floats up from below onto the apex. Total 700 ms, easing cubic-bezier(.65,0,.35,1). The order is the story: structure, connection, arrival. Exit: fade 150 ms.</p></div>
+<div class="card" style="display:flex;gap:20px;align-items:center"><svg class="ld" viewBox="0 0 100 100" width="56" height="56" style="color:var(--ink);flex:none"><path class="p1" d="M12 14h16v72H12z" fill="currentColor"/><path class="p2" d="M72 14h16v72H72z" fill="currentColor"/><path class="c" pathLength="100" d="M22 71.6 50 36 78 71.6" fill="none" stroke="currentColor" stroke-width="14"/><circle class="n" cx="50" cy="15" r="6.5" fill="var(--ac)"/></svg><p class="m" style="margin:0">Loading loop: 1.6 s, CSS only. Reduced motion: static mark, no loop. For long waits, add a text status beside it.</p></div>
 </div>
-<p class="m" style="margin-top:12px">Interaction: 120 to 180 ms transitions, translate and opacity only. No glow, particles or 3D.</p>
 
-<h2>Visual language and UI</h2>
-<p class="m">Everything derives from the mark: pillars become vertical rules and sidebar edges, the chevron becomes a 38° angled cut used on hero shapes, and the node becomes the one accent dot (status, focus, active tab). Radius: 8px controls, 12px cards, 4px badges, never pill-shaped containers. Spacing on an 4px base, 8px rhythm.</p>
+<h2>Visual language</h2>
+<p>Use the chevron angle (about 38 degrees from vertical) sparingly, for hero cuts and section dividers, as a principle rather than a rule. Pillars suggest vertical rules and sidebar edges, and the node becomes the single accent dot (active state, focus, status). Components stay conventional: 8px radius controls and 12px cards are suggestions, not requirements. The brand should guide a product, not dictate its shapes.</p>
 <div class="grid">
-<div class="card"><h3>Buttons</h3><button style="background:var(--inv);color:var(--invt);border:0">Deploy project</button> <button>Cancel</button><p class="m" style="margin-top:10px">Primary is inverted black or white. Accent is reserved for focus, links and the active node.</p></div>
-<div class="card"><h3>Input and badge</h3><input aria-label="Project name" placeholder="Project name" style="width:100%;font:inherit;padding:9px 12px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--ink)"><p style="margin-top:10px"><span style="border:1px solid var(--bd);border-radius:4px;padding:2px 8px;font-size:13px"><span style="color:var(--ac)">&#9679;</span> Live</span></p></div>
-<div class="card"><h3>Empty and error states</h3><p class="m">Empty: "No projects yet. Create your first one." Error: "Deploy failed: build timed out after 10 minutes. Check the build log and retry." Plain, specific, no apologies.</p></div>
+<div class="card"><h3>Dashboards</h3><p class="m">Neutral surfaces, accent only on active nav item, focus ring and primary data series. Mark top-left at 24px, footer signature at 70% opacity.</p></div>
+<div class="card"><h3>Developer tools and docs</h3><p class="m">System monospace for code and metadata. Mark in the header only; the signature lives in the footer. Content leads.</p></div>
+<div class="card"><h3>GitHub and portfolio</h3><p class="m">Org avatar uses the black app tile. README footer carries Built by APEXHUB as a single line. Portfolio hero leads with the work.</p></div>
+<div class="card"><h3>States</h3><p class="m">Errors and notices use text and icons with color, never color alone. Empty states say what to do next in one sentence.</p></div>
 </div>
 
-<h2>Voice and taglines</h2>
-<p><b>Primary: Built with intention.</b> Short, ownable, and it pairs directly with "Built by APEXHUB". Backups: <b>Engineered ideas.</b> / <b>Where ideas get built.</b> / <b>Craft, shipped.</b></p>
-<p class="m">Rejected: "Build at the peak" (overpromises and ties to the mountain cliché), "Ideas. Code. Impact." (generic), "Building what's next." (futurist filler). Voice: a competent builder who explains clearly, avoids buzzwords, and lets the work make the claim.</p>
+<h2>Typography</h2>
+<div class="tbl card"><table>
+<tr><th>Role</th><th>Face</th><th>Weights</th><th>Notes</th></tr>
+<tr><td>Brand and headings</td><td>Sora</td><td>600, 700</td><td>Geometric, wide, SIL OFL. Loose at small sizes, so use 24px and up. Alt: Manrope.</td></tr>
+<tr><td>Interface and body</td><td>Inter</td><td>400, 500, 600</td><td>Excellent screen rendering, OFL. Alt: Geist.</td></tr>
+</table></div>
+<p class="m" style="margin-top:12px">Two brand fonts only. Code and technical labels use the system monospace stack (ui-monospace, SFMono-Regular, Menlo, Consolas), which is a fallback and not a third brand font.</p>
+<p class="m" style="margin-top:12px">Scale: Display 56/64 Sora 700; H1 40 Sora 700; H2 28 Sora 600; H3 20 Sora 600; Body 16/1.6 Inter 400; Small 14 Inter 400; Caption 12 Inter 500; Code 13 system mono; Metadata 12 Inter 500. Typographic signature: tracking +80 on uppercase Sora wordmark use only.</p>
 
-<h2>Brand architecture</h2>
-<p>A master brand with descriptor endorsement: <b>APEXHUB</b> always leads, products follow as plain descriptors (APEXHUB Labs, APEXHUB Studio, APEXHUB Cloud, APEXHUB AI). Sub-products reuse the same mark, never new symbols, differing only by a small mono-set descriptor beside the wordmark. This prevents fragmentation and makes every launch build the same equity.</p>
+<h2>Tokens and CSS</h2>
+<pre class="mono">:root{
+  --brand-primary:#0A0A0F; --brand-surface:#FFFFFF; --brand-surface-elevated:#F7F7F9;
+  --brand-text:#0A0A0F;    --brand-text-muted:#5F6070; --brand-border:#E2E2E9;
+  --brand-accent:#5A4BFF;  --brand-accent-hover:#4A3BE6; --brand-accent-soft:#ECEAFF;
+  --brand-focus:#5A4BFF;
+  --font-display:Sora,sans-serif; --font-body:Inter,sans-serif; --font-code:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --radius-control:8px; --radius-card:12px; --shadow-1:0 1px 2px rgba(10,10,15,.08);
+  --ease-brand:cubic-bezier(.65,0,.35,1); --dur-fast:150ms; --dur-base:250ms; --dur-logo:700ms;
+}
+[data-theme="dark"]{
+  --brand-surface:#0A0A0F; --brand-surface-elevated:#14141C; --brand-text:#F5F5F8;
+  --brand-text-muted:#9A9BAE; --brand-border:#2A2A36;
+  --brand-accent:#8378FF; --brand-accent-hover:#988FFF; --brand-accent-soft:#1F1C3D; --brand-focus:#8378FF;
+}</pre>
+<p class="m" style="margin-top:12px">Dark mode is separately tuned (a lighter accent, borders instead of shadows), not an inversion. I did not verify the hover and soft values for contrast, so check them before use.</p>
+
+<h2>Distinctiveness audit</h2>
+<p>Ascent Node is the more conventional of the two options. It combines three common ingredients (an H, a chevron, a node), so its ownability rests on the specific placement and proportions, not on the idea. Avoided on purpose: mountains, arrows, hexagons, circuits, sparkles, gradient blobs, and brackets. I cannot guarantee uniqueness: a text search cannot compare shapes. Run it through reverse image search and a trademark search before committing.</p>
+<div class="card" style="border-color:#D63A3A"><h3>Name risk, unchanged</h3><p class="m" style="margin:0">The name APEXHUB is in use by a UK digital marketing company, an ApexHub Labs repo, a racing-data app, and others (see the earlier search). A strong mark does not fix that. The mark does not depend on the name, so it can move to a new name if needed.</p></div>
+
+<h2>Voice, taglines, architecture</h2>
+<p>Voice: a capable builder explaining plainly. Short sentences, specific nouns, no superlatives. Words to use: built, engineered, shipped, intentional. Words to avoid: revolutionary, seamless, cutting-edge.</p>
+<p><b>Primary: Built with intention.</b> Alternatives: <b>Where the peak meets the hub.</b> / <b>Engineered to rise.</b> / <b>Build the next level.</b> Others considered and dropped: Build at the peak, Ideas. Code. Impact., Technology with intention, Where ideas converge, Crafted for the digital world, Digital craftsmanship, Made to climb, One step higher, Built to connect, Ship higher. "Where the peak meets the hub" is the closest match to the mark's idea; "Built with intention" is the safer fit for the signature. Taglines are design judgments, not tested.</p>
+<p><b>Architecture:</b> branded house. APEXHUB leads; products are plain descriptors set in Inter beside the wordmark (APEXHUB Labs, Cloud, AI). They always use the same mark, a mono-colored descriptor, and no new accent colors. Products can differ by content, never by logo.</p>
 
 <h2>Guidelines</h2>
 <div class="grid">
-<div class="card"><h3>Sizes</h3><p class="m">Full logo: 120px wide recommended, 80px minimum. Horizontal: 100px, 64px minimum. Icon: 32px, 20px minimum. Micro mark: 16px recommended and minimum. Footer signature: 13px text, 11px minimum.</p></div>
-<div class="card"><h3>Correct use</h3><p class="m">Black on light, white on dark, node in Signal Violet only on neutral backgrounds with 3:1 contrast. One-color versions on photos. Clear space of 1x always.</p></div>
-<div class="card"><h3>Tokens</h3><p class="mono" style="line-height:1.7;margin:0">--brand-primary:#0A0A0F<br>--brand-secondary:#14141C<br>--brand-accent:#5A4BFF<br>--brand-surface:#FFFFFF<br>--brand-text:#0A0A0F<br>--brand-muted:#5F6070<br>--brand-border:#E2E2E9</p></div>
+<div class="card"><h3>Clear space</h3><p class="m">X = pillar width. Keep 1X on all sides of the mark, and 1X between mark and wordmark. In the signature, 8px minimum around the lockup.</p></div>
+<div class="card"><h3>Minimum sizes</h3><p class="m">Full logo: 120 px wide recommended, 88 px minimum. Horizontal: 96 / 72. Stacked: 72 / 56 wide. Symbol: 32 / 20. Micro mark: 20 / 14. Signature: 13px text, 11px minimum. These are working recommendations to verify in real renders.</p></div>
 </div>
 <h3 style="margin-top:24px">Never</h3>
-<div class="bad">Stretch, squash, rotate or skew the mark.</div>
-<div class="bad">Add glow, shadow, bevel or unapproved gradients.</div>
-<div class="bad">Recolor pillars in the accent, or recolor the node randomly.</div>
-<div class="bad">Retype or respace the wordmark, or rebuild the mark by hand.</div>
-<div class="bad">Place the full-color mark on low-contrast or busy backgrounds.</div>
+<div class="bad">Stretch, rotate, outline, or fill the mark with patterns.</div>
+<div class="bad">Add glow, shadow, bevel, or gradients to the mark or node.</div>
+<div class="bad">Move the node, change the chevron angle, or retype the wordmark.</div>
+<div class="bad">Place the mark below 3:1 contrast, including the accent node on black.</div>
 
-<h2>Asset package</h2>
-<p class="m">Deliver APEXHUB-BRAND/ with LOGO, COLORS, TYPOGRAPHY, SIGNATURE, FAVICON, APP-ICON, SOCIAL, WATERMARK, MOTION and BRAND-GUIDELINES folders. Each logo in SVG (clean paths, no raster), transparent PNG at 1x/2x/3x, WebP where useful, in light, dark, monochrome and accent versions; favicon as SVG plus 32/48 PNG and ICO; app icons at 192, 512 and 1024.</p>
+<h2>Assets and not yet built</h2>
+<p class="m">Deliver the structure from your brief with SVG as the source (the mark is three paths per variant, no effects), then transparent PNG, WebP, ICO and PNG favicons, and 192, 512, and 1024 app icons. Not built in this pass: the full mockup set (portfolio, mobile UI, GitHub, 404, presentation), exported files, a drawn wordmark outline, and real-device small-size checks. Say which to build next.</p>
 </main>
 <script>
 document.getElementById('t').onclick=function(){var r=document.documentElement,d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.setAttribute('data-theme',d==='dark'?'light':'dark')};
